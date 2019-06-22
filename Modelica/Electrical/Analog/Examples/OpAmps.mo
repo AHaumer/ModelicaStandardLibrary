@@ -1494,5 +1494,14 @@ Different functionality is achieved by different circuits.
               fillColor={192,192,192},
               fillPattern=FillPattern.Solid)}));
     end PI;
+    annotation (Documentation(info="<html>
+<p>This package provides some fully connected operational amplifiers circuts.
+</p>
+</html>"));
   end OpAmpCircuits;
+  annotation (Documentation(info="<html>
+<p>This package contains applications examples of the components provided in the package
+<a href=\"Modelica.Electrical.Analog.Examples.OpAmps.OpAmpCircuits\">OpAmpCircuits</a>.
+</p>
+</html>"));
 end OpAmps;
