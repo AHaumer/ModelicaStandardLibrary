@@ -1971,10 +1971,10 @@ angle interval. Note: the angles are often wrapped within the interval ]-&pi;, +
 [0, 2&pi;[.
 </p>
 <p>
-The angle of a complex space phasor is controlled such way that its imaginary part is euqal to zero. 
-The controlled angle&nbsp;<code>y</code> is the unwrapped continuos angle. 
+The angle of a complex space phasor is controlled in such a way that its imaginary part is equal to zero. 
+The controlled angle&nbsp;<code>y</code> is the unwrapped continuous angle. 
 The output&nbsp;<code>y</code> approximates the desired angle by a first order system
-whose time constant is the integral time constant of the controller:
+which time constant is the integral time constant of the controller:
 </p>
 <blockquote><pre>
 Im(e<sup><code>j*(u-y)</code></sup>) = sin(u - y)
@@ -1987,7 +1987,8 @@ determined as:
 <code>y&nbsp;=&nbsp;u&nbsp;/&nbsp;(1&nbsp;+&nbsp;s*Ti)</code>.
 </p>
 <p>
-The derivative of the output&nbsp;<code>y</code> is the angular velocity&nbsp;<code>w</code>, provided as signal output.
+The derivative of the output&nbsp;<code>y</code> is the angular velocity&nbsp;<code>w</code>,
+provided as an output signal as well.
 </p>
 </html>"));
   end UnwrapAngle;
