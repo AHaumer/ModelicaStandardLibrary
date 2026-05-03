@@ -1,5 +1,6 @@
-within Modelica.Magnetic.QuasiStatic.FundamentalWave.Examples.BasicMachines.InductionMachines;
-model IMC_Initialize "Steady-state initialization of induction machine with squirrel cage"
+within ModelicaTest.Magnetic.QuasiStatic.FundamentalWave.Examples.BasicMachines.InductionMachines;
+model IMC_Initialize
+  "Steady-state initialization of induction machine with squirrel cage"
   extends Modelica.Icons.Example;
   import Modelica.Constants.pi;
   parameter Integer m=3 "Number of phases" annotation(Evaluate=true);
@@ -13,7 +14,7 @@ model IMC_Initialize "Steady-state initialization of induction machine with squi
        1440.45*2*Modelica.Constants.pi/60 "Nominal load speed";
   parameter SI.Inertia JLoad=0.29
     "Load's moment of inertia";
-  Magnetic.QuasiStatic.FundamentalWave.BasicMachines.InductionMachines.IM_SquirrelCage
+  Modelica.Magnetic.QuasiStatic.FundamentalWave.BasicMachines.InductionMachines.IM_SquirrelCage
     imcQS(
     p=imcData.p,
     fsNominal=imcData.fsNominal,
@@ -62,15 +63,16 @@ model IMC_Initialize "Steady-state initialization of induction machine with squi
     stepTorque=-TLoad,
     offsetTorque=0)
     annotation (Placement(transformation(extent={{60,40},{40,60}})));
-  Utilities.MultiTerminalBox
-                        terminalBoxQS(m=m, terminalConnection="Y")
-                                                              annotation (Placement(transformation(extent={{-20,56},{0,76}})));
+  Modelica.Magnetic.QuasiStatic.FundamentalWave.Utilities.MultiTerminalBox terminalBoxQS(m=m,
+      terminalConnection="Y")
+    annotation (Placement(transformation(extent={{-20,56},{0,76}})));
   parameter
     Modelica.Electrical.Machines.Utilities.ParameterRecords.IM_SquirrelCageData
     imcData "Induction machine data"
     annotation (Placement(transformation(extent={{70,72},{90,92}})));
 
-  Magnetic.FundamentalWave.BasicMachines.InductionMachines.IM_SquirrelCage imc(
+  Modelica.Magnetic.FundamentalWave.BasicMachines.InductionMachines.IM_SquirrelCage
+    imc(
     p=imcData.p,
     fsNominal=imcData.fsNominal,
     TsRef=imcData.TsRef,
@@ -170,9 +172,12 @@ equation
   connect(starMachine.pin_n, ground.p) annotation (Line(points={{-40,-72},{-40,-80},{-70,-80}}, color={0,0,255}));
   connect(starMachineQS.pin_n, groundQS.pin) annotation (Line(points={{-40,28},{-40,20},{-70,20}}, color={85,170,255}));
   annotation (experiment(
-      StopTime=1.5,
+      StopTime=0.60,
       Interval=0.0001,
-      Tolerance=1e-06),                                         Documentation(
+      Tolerance=1e-06),
+    TestCase(shouldPass = true,
+      __ModelicaAssociation(Comparison(TimeWindows={TimeSlot(0.45, 0.60)}))),
+      Documentation(
         info="<html>
 <strong>Test example: Steady-State Initialization of an induction machine with squirrel cage</strong><br>
 The induction machine with squirrel cage is initialized in steady-state at no-load;

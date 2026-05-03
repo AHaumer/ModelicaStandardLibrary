@@ -3,6 +3,7 @@ Blocks
 Tables
 Electrical
 Fluid
+Magnetic
 Media
 Math
 MultiBody
@@ -10,4 +11,3 @@ Rotational
 Translational
 Utilities
 ComplexMath
-Magnetic
