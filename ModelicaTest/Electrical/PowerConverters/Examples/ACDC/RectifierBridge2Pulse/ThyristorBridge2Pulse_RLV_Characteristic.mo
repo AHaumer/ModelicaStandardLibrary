@@ -10,9 +10,8 @@ model ThyristorBridge2Pulse_RLV_Characteristic
     TestCase(shouldPass = true,
       __ModelicaAssociation(Comparison(TimeWindows={TimeSlot(4.95, 5.05)}))),
     Documentation(info="<html>
-
-<p>This examples shows a two pulse full controlled bridge example with R-L load including DC voltage source. The additional DC voltage source in this example enables negative average load voltages.</p>
-
-<p>Plot average voltage <code>meanVoltage.v</code> versus firingAngle <code>pulse2.firingAngle</code> to see control characteristic of this type of rectifier with R-L load including active voltage.</p>
+<p>
+The original documentation is available at the model from which this one is extended.
+</p>
 </html>"));
 end ThyristorBridge2Pulse_RLV_Characteristic;

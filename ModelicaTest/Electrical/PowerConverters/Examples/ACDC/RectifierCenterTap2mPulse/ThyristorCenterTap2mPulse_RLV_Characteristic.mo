@@ -10,8 +10,8 @@ model ThyristorCenterTap2mPulse_RLV_Characteristic
     TestCase(shouldPass = true,
       __ModelicaAssociation(Comparison(TimeWindows={TimeSlot(4.95, 5.05)}))),
     Documentation(info="<html>
-<p>This example shows a controlled <code>2*m</code> pulse center tap rectifier with R-L load including DC voltage source, where <code>m</code> is the number of phases. The additional DC voltage source in this example enables negative average load voltages.</p>
-
-<p>Plot average voltage <code>meanVoltage.v</code> versus firingAngle <code>pulsem.firingAngle</code> to see control characteristic of this type of rectifier with R-L load including active voltage.</p>
+<p>
+The original documentation is available at the model from which this one is extended.
+</p>
 </html>"));
 end ThyristorCenterTap2mPulse_RLV_Characteristic;
