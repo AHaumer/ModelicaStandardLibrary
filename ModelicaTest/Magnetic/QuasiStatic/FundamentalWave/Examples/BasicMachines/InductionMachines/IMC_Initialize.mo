@@ -7,18 +7,11 @@ model IMC_Initialize "Steady-state initialization of induction machine with squi
       Tolerance=1e-06),
     TestCase(shouldPass = true,
       __ModelicaAssociation(Comparison(TimeWindows={TimeSlot(0.45, 0.60)}))),
-      Documentation(
+    Documentation(
         info="<html>
-<strong>Test example: Steady-State Initialization of an induction machine with squirrel cage</strong><br>
-The induction machine with squirrel cage is initialized in steady-state at no-load;
-at time tStart a load torque step is applied.<br>
-Simulate for 1.5 seconds and plot (versus time):
-<ul>
-<li><code>currentQuasiRMSSensor|currentQuasiRMSSensorQS.I</code>: (equivalent) RMS stator current</li>
-<li><code>imc|imcQS.wMechanical</code>: machine speed</li>
-<li><code>imc|imcQS.tauElectrical</code>: machine torque</li>
-</ul>
-Default machine parameters of model <em>IM_SquirrelCage</em> are used.
+<p>
+The original documentation is available at the model from which this one is extended.
+</p>
 </html>"),
     Diagram(graphics={
         Text(

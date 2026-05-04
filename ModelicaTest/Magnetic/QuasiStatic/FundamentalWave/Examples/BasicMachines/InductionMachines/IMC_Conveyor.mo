@@ -7,17 +7,8 @@ model IMC_Conveyor "Induction machine with squirrel cage and inverter driving a 
     Documentation(
         info="<html>
 <p>
-An ideal frequency inverter is modeled by using a VfController and a three-phase SignalVoltage.
-Frequency is driven by a load cycle of acceleration, constant speed, deceleration and standstill.
-The mechanical load is a constant torque like a conveyor (with regularization around zero speed).
+The original documentation is available at the model from which this one is extended.
 </p>
-<p>Simulate for 20 seconds and plot (versus time):</p>
-<ul>
-<li><code>currentQuasiRMSSensor|currentQuasiRMSSensorQS.I</code>: (equivalent) stator current RMS</li>
-<li><code>imc|imcQS.wMechanical</code>: machine speed</li>
-<li><code>imc|imcQS.tauElectrical</code>: machine torque</li>
-</ul>
-<p>Default machine parameters are used.</p>
 </html>"),
     Diagram(graphics={
         Text(
