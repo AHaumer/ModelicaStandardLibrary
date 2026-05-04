@@ -6,10 +6,5 @@ model Dimmer_RL "Dimmer with resistive-inductive load"
       Interval=0.0002,
       Tolerance=1e-06),
     TestCase(shouldPass = true,
-      __ModelicaAssociation(Comparison(TimeWindows={TimeSlot(2.90, 3.00)}))),
-    Documentation(info="<html>
-<p>
-The original documentation is available at the model from which this one is extended.
-</p>
-</html>"));
+      __ModelicaAssociation(Comparison(TimeWindows={TimeSlot(2.90, 3.00)}))));
 end Dimmer_RL;

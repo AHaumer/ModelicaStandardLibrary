@@ -8,10 +8,5 @@ model ThyristorBridge2mPulse_RLV_Characteristic
       Interval=0.0002,
       Tolerance=1e-06),
     TestCase(shouldPass = true,
-      __ModelicaAssociation(Comparison(TimeWindows={TimeSlot(4.95, 5.05)}))),
-    Documentation(info="<html>
-<p>
-The original documentation is available at the model from which this one is extended.
-</p>
-</html>"));
+      __ModelicaAssociation(Comparison(TimeWindows={TimeSlot(4.95, 5.05)}))));
 end ThyristorBridge2mPulse_RLV_Characteristic;
