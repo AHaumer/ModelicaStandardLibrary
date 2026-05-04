@@ -5,12 +5,6 @@ model SMPM_CurrentSource "Test example: PermanentMagnetSynchronousMachine fed by
     experiment(StopTime=0.20, Interval=1E-4, Tolerance=1E-6),
     TestCase(shouldPass = true,
       __ModelicaAssociation(Comparison(TimeWindows={TimeSlot(0.00, 0.20)}))),
-    Documentation(
-        info="<html>
-<p>
-The original documentation is available at the model from which this one is extended.
-</p>
-</html>"),
     Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
             -100},{100,100}}), graphics={
         Text(

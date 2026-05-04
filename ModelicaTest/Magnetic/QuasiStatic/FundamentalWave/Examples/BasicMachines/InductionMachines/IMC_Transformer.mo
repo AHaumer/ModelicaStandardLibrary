@@ -4,12 +4,6 @@ model IMC_Transformer "Induction machine with squirrel cage starting with transf
   annotation (experiment(StopTime=2.1, Interval=0.0001, Tolerance=1e-06),
     TestCase(shouldPass = true,
       __ModelicaAssociation(Comparison(TimeWindows={TimeSlot(2.00, 2.10)}))),
-    Documentation(
-        info="<html>
-<p>
-The original documentation is available at the model from which this one is extended.
-</p>
-</html>"),
     Diagram(graphics={
         Text(
           extent={{80,8},{160,0}},

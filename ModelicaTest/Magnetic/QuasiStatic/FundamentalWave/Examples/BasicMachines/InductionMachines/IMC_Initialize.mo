@@ -7,12 +7,6 @@ model IMC_Initialize "Steady-state initialization of induction machine with squi
       Tolerance=1e-06),
     TestCase(shouldPass = true,
       __ModelicaAssociation(Comparison(TimeWindows={TimeSlot(0.45, 0.60)}))),
-    Documentation(
-        info="<html>
-<p>
-The original documentation is available at the model from which this one is extended.
-</p>
-</html>"),
     Diagram(graphics={
         Text(
           extent={{20,8},{100,0}},

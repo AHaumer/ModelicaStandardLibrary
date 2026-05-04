@@ -8,12 +8,6 @@ model SMEE_Generator "Electrical excited synchronous machine operating as genera
       Tolerance=1e-06),
     TestCase(shouldPass = true,
       __ModelicaAssociation(Comparison(TimeWindows={TimeSlot(14.9, 15.1)}))),
-    Documentation(
-        info="<html>
-<p>
-The original documentation is available at the model from which this one is extended.
-</p>
-</html>"),
     Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
             -100},{100,100}}),
                          graphics={         Text(
