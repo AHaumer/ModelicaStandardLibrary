@@ -7,5 +7,5 @@ model HBridge_DC_Drive "H bridge DC/DC converter with DC drive"
       Interval=0.0002,
       Tolerance=1e-06),
      TestCase(shouldPass = true,
-      __ModelicaAssociation(Comparison(TimeWindows={TimeSlot(4.00, 4.10)}))));
+      __ModelicaAssociation(Comparison(timeWindows={TimeWindow(4.00, 4.10)}))));
 end HBridge_DC_Drive;

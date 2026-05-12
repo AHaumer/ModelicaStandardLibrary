@@ -8,5 +8,5 @@ model Thyristor1Pulse_R_Characteristic
       Tolerance=1e-06,
       Interval=0.0002),
     TestCase(shouldPass = true,
-      __ModelicaAssociation(Comparison(TimeWindows={TimeSlot(4.95, 5.05)}))));
+      __ModelicaAssociation(Comparison(timeWindows={TimeWindow(4.95, 5.05)}))));
 end Thyristor1Pulse_R_Characteristic;

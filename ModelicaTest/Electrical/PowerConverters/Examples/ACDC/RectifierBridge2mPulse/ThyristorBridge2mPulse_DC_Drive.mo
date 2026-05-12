@@ -8,5 +8,5 @@ model ThyristorBridge2mPulse_DC_Drive
       Interval=0.0002,
       Tolerance=1e-006),
     TestCase(shouldPass = true,
-      __ModelicaAssociation(Comparison(TimeWindows={TimeSlot(2.45, 2.55)}))));
+      __ModelicaAssociation(Comparison(timeWindows={TimeWindow(2.45, 2.55)}))));
 end ThyristorBridge2mPulse_DC_Drive;
