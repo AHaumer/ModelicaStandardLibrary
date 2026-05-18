@@ -7,7 +7,7 @@ model SMEE_Generator "Electrical excited synchronous machine operating as genera
       Interval=1E-4,
       Tolerance=1e-06),
     TestCase(shouldPass = true,
-      __ModelicaAssociation(Comparison(TimeWindows={TimeSlot(14.9, 15.1)}))),
+      __ModelicaAssociation(Comparison(timeWindows={TimeWindow(14.9, 15.1)}))),
     Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
             -100},{100,100}}),
                          graphics={         Text(

@@ -5,8 +5,8 @@ model IMC_Initialize "Steady-state initialization of induction machine with squi
       StopTime=0.60,
       Interval=0.0001,
       Tolerance=1e-06),
-    TestCase(shouldPass = true,
-      __ModelicaAssociation(Comparison(TimeWindows={TimeSlot(0.45, 0.60)}))),
+    TestCase(shouldPass = true,	
+      __ModelicaAssociation(Comparison(timeWindows={TimeWindow(0.45, 0.60)}))),
     Diagram(graphics={
         Text(
           extent={{20,8},{100,0}},

@@ -4,7 +4,7 @@ model SMPM_CurrentSource "Test example: PermanentMagnetSynchronousMachine fed by
   annotation (
     experiment(StopTime=0.20, Interval=1E-4, Tolerance=1E-6),
     TestCase(shouldPass = true,
-      __ModelicaAssociation(Comparison(TimeWindows={TimeSlot(0.00, 0.20)}))),
+      __ModelicaAssociation(Comparison(timeWindows={TimeWindow(0.00, 0.20)}))),
     Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
             -100},{100,100}}), graphics={
         Text(
