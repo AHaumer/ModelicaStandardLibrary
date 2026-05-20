@@ -1,6 +1,87 @@
 within ModelicaTest.Electrical;
 package Machines
   extends Modelica.Icons.ExamplesPackage;
+  package Examples
+    extends Modelica.Icons.ExamplesPackage;
+    package InductionMachines
+      extends Modelica.Icons.ExamplesPackage;
+      model IMC_YDarc "Test example: InductionMachineSquirrelCage Y-D"
+        extends Modelica.Electrical.Machines.Examples.InductionMachines.IMC_YDarc;
+        annotation (experiment(StopTime=2.07, Interval=0.0001, Tolerance=1e-06),
+          TestCase(shouldPass = true,
+          __ModelicaAssociation(Comparison(timeWindows={TimeWindow(2.02, 2.07)}))));
+      end IMC_YDarc;
+
+      model IMC_Transformer
+        "Test example: InductionMachineSquirrelCage transformer starting"
+        extends Modelica.Electrical.Machines.Examples.InductionMachines.IMC_Transformer;
+        annotation (experiment(StopTime=2.05, Interval=1E-4, Tolerance=1e-06),
+          TestCase(shouldPass = true,
+          __ModelicaAssociation(Comparison(timeWindows={TimeWindow(2.00, 2.05)}))));
+      end IMC_Transformer;
+
+      model IMC_Conveyor
+        "Test example: InductionMachineSquirrelCage with inverter driving a conveyor"
+        extends Modelica.Electrical.Machines.Examples.InductionMachines.IMC_Conveyor;
+        annotation (experiment(StopTime=0.35, Interval=0.001, Tolerance=1e-06),
+          TestCase(shouldPass = true,
+          __ModelicaAssociation(Comparison(timeWindows={TimeWindow(0.25, 0.35)}))));
+      end IMC_Conveyor;
+
+      model IMC_InverterDrive
+        "Test example: InductionMachineSquirrelCage inverter drive"
+        extends Modelica.Electrical.Machines.Examples.InductionMachines.IMC_InverterDrive;
+        annotation (experiment(StopTime=0.95, Interval=5e-05, Tolerance=1e-06),
+          TestCase(shouldPass = true,
+          __ModelicaAssociation(Comparison(timeWindows={TimeWindow(0.85, 0.95)}))));
+      end IMC_InverterDrive;
+
+      model IMC_withLosses
+        "Test example: InductionMachineSquirrelCage with losses"
+        extends Modelica.Electrical.Machines.Examples.InductionMachines.IMC_withLosses;
+        annotation (experiment(StopTime=4.6, Interval=1E-4, Tolerance=1e-06),
+          TestCase(shouldPass = true,
+          __ModelicaAssociation(Comparison(timeWindows={TimeWindow(4.5, 4.6)}))));
+      end IMC_withLosses;
+
+      model IMC_DCBraking "Induction machine with DC current braking"
+        extends Modelica.Electrical.Machines.Examples.InductionMachines.IMC_DCBraking;
+        annotation (experiment(StopTime=16.1, Interval=0.001, Tolerance=1e-06),
+          TestCase(shouldPass = true,
+          __ModelicaAssociation(Comparison(timeWindows={TimeWindow(16.0, 16.1)}))));
+      end IMC_DCBraking;
+    end InductionMachines;
+
+    package SynchronousMachines
+      extends Modelica.Icons.ExamplesPackage;
+      model SMEE_DOL
+        "Test example: ElectricalExcitedSynchronousMachine starting direct on line"
+        extends Modelica.Electrical.Machines.Examples.SynchronousMachines.SMEE_DOL;
+        annotation (experiment(StopTime=2.05, Interval=0.0001, Tolerance=1e-006),
+          TestCase(shouldPass = true,
+          __ModelicaAssociation(Comparison(timeWindows={TimeWindow(2.00, 2.05)}))));
+      end SMEE_DOL;
+
+      model SMEE_LoadDump
+        "Test example: ElectricalExcitedSynchronousMachine with voltage controller"
+        extends Modelica.Electrical.Machines.Examples.SynchronousMachines.SMEE_LoadDump;
+        annotation (experiment(StopTime=4.05, Interval=1E-4, Tolerance=1e-06),
+          TestCase(shouldPass = true,
+          __ModelicaAssociation(Comparison(timeWindows={TimeWindow(4.00, 4.05)}))));
+      end SMEE_LoadDump;
+    end SynchronousMachines;
+
+    package DCMachines
+      extends Modelica.Icons.ExamplesPackage;
+      model DCPM_Cooling "Test example: Cooling of a DCPM motor"
+        extends Modelica.Electrical.Machines.Examples.DCMachines.DCPM_Cooling;
+        annotation (experiment(StopTime=5.75, Interval=1E-3, Tolerance=1E-6),
+          TestCase(shouldPass = true,
+          __ModelicaAssociation(Comparison(timeWindows={TimeWindow(5.25, 5.75)}))));
+      end DCPM_Cooling;
+    end DCMachines;
+  end Examples;
+
   model SMPM_VoltageSourceWithLosses
     "Test example: PermanentMagnetSynchronousMachine fed by FOC"
     extends Modelica.Icons.Example;
